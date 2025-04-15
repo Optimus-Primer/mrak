@@ -1,0 +1,273 @@
+/* Основные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f5f5f5;
+}
+
+/* Стили для навбара */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    color: #1a237e;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active {
+    background: #e3f2fd;
+    color: #1a237e;
+}
+
+/* Стили для основного контента */
+.orders-container {
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для фильтров */
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Стили для карточек заказов */
+.orders-list {
+    display: grid;
+    gap: 20px;
+}
+
+.order-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.order-number {
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.order-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.order-status.urgent {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.address-info {
+    margin-bottom: 15px;
+}
+
+.pickup,
+.delivery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.pickup i,
+.delivery i {
+    color: #1a237e;
+}
+
+.order-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-item i {
+    color: #1a237e;
+}
+
+.order-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.accept-btn,
+.details-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accept-btn {
+    background: #1a237e;
+    color: white;
+}
+
+.accept-btn:hover {
+    background: #0d47a1;
+}
+
+.details-btn {
+    background: #e3f2fd;
+    color: #1a237e;
+}
+
+.details-btn:hover {
+    background: #bbdefb;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .orders-container {
+        padding: 15px;
+    }
+
+    .order-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .accept-btn,
+    .details-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-brand a {
+        font-size: 18px;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .order-info {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        margin: 60px 15px;
+        padding: 20px;
+    }
+}

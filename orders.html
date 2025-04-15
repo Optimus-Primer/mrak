@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступные заказы</title>
+    <link rel="stylesheet" href="orders-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="catalog.html" class="header-btn home-btn">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+
+        <div class="nav-brand">
+            <a href="index.html">
+                <i class="fas fa-tools"></i>
+                <span>СтройМаркет</span>
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="#" class="active">Доступные заказы</a>
+            <a href="#" onclick="showMyDeliveries()">Мои доставки</a>
+            <div class="driver-profile">
+                <a href="#" class="profile-icon" onclick="toggleProfileMenu()">
+                    <i class="fas fa-user"></i>
+                    <span class="driver-name">Имя водителя</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="orders-container">
+        <div class="filters">
+            <select id="orderFilter">
+                <option value="all">Все заказы</option>
+                <option value="new">Новые</option>
+                <option value="urgent">Срочные</option>
+                <option value="nearby">Ближайшие</option>
+            </select>
+        </div>
+
+        <div class="orders-list">
+            <!-- Пример карточки заказа -->
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-number">Заказ #12345</span>
+                    <span class="order-status urgent">Срочный</span>
+                </div>
+
+                <div class="order-details">
+                    <div class="address-info">
+                        <div class="pickup">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Склад: ул. Складская, 1</span>
+                        </div>
+                        <div class="delivery">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Доставка: ул. Строителей, 15</span>
+                        </div>
+                    </div>
+
+                    <div class="order-info">
+                        <div class="info-item">
+                            <i class="fas fa-box"></i>
+                            <span>Вес: 500 кг</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Время доставки: 14:00-16:00</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Оплата: 2500 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-actions">
+                    <button class="accept-btn" onclick="acceptOrder(12345)">Принять заказ</button>
+                    <button class="details-btn" onclick="showOrderDetails(12345)">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- Дополнительные карточки заказов -->
+        </div>
+    </main>
+
+    <!-- Модальное окно с деталями заказа -->
+    <div id="orderDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeOrderDetails()">&times;</span>
+            <h2>Детали заказа #12345</h2>
+            <div class="order-full-details">
+                <!-- Содержимое будет добавляться динамически -->
+            </div>
+        </div>
+    </div>
+
+    <script src="orders.js"></script>
+</body>
+
+</html>

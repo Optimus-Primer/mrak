@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - СтройМаркет</title>
+    <link rel="stylesheet" href="catalog-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Обновленная навигационная панель -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="catalog.html" class="header-btn home-btn">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+
+        <div class="nav-brand">
+            <a href="index.html">
+                <i class="fas fa-tools"></i>
+                <span>СтройМаркет</span>
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <button class="header-btn search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <a href="cart.html" class="header-btn cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="header-btn profile-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="catalog-container">
+        <!-- Боковая панель с категориями -->
+        <aside class="categories-sidebar">
+            <h3>Категории</h3>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-border-all"></i>
+                    Все товары
+                </button>
+                <button class="category-btn" data-category="tools">
+                    <i class="fas fa-tools"></i>
+                    Инструменты
+                </button>
+                <button class="category-btn" data-category="building">
+                    <i class="fas fa-hard-hat"></i>
+                    Строительные материалы
+                </button>
+                <button class="category-btn" data-category="finishing">
+                    <i class="fas fa-paint-roller"></i>
+                    Отделочные материалы
+                </button>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="products-section">
+            <!-- Фильтры и сортировка -->
+            <div class="filters-bar">
+                <div class="active-category">
+                    <i class="fas fa-border-all"></i>
+                    <span>Все товары</span>
+                </div>
+                <select class="sort-select">
+                    <option value="popular">По популярности</option>
+                    <option value="price-asc">Сначала дешевые</option>
+                    <option value="price-desc">Сначала дорогие</option>
+                    <option value="new">Новинки</option>
+                </select>
+            </div>
+
+            <!-- Сетка товаров -->
+            <div class="products-grid">
+                <!-- ИНСТРУМЕНТЫ -->
+                <div class="product-card" data-category="tools">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/9vPNzxh/bosch-hammer.jpg" alt="Перфоратор BOSCH">
+                        <div class="product-labels">
+                            <span class="label-new">Новинка</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Перфоратор BOSCH GBH 2-26 DFR</h3>
+                        <p class="description">Мощность: 800 Вт, SDS-plus</p>
+                        <div class="price">
+                            <span class="current">12 990</span>
+                            <span class="old">15 990</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="tools">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/0MKJkHM/dewalt-drill.jpg" alt="Дрель DeWALT">
+                        <div class="product-labels">
+                            <span class="label-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Дрель-шуруповерт DeWALT DCD791</h3>
+                        <p class="description">Аккумуляторная, 18В, 2 аккумулятора</p>
+                        <div class="price">
+                            <span class="current">15 490</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="tools">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/wS6ZTnz/makita-grinder.jpg" alt="УШМ Makita">
+                        <div class="product-labels">
+                            <span class="label-sale">-20%</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>УШМ Makita GA5030</h3>
+                        <p class="description">Мощность: 720 Вт, диск 125 мм</p>
+                        <div class="price">
+                            <span class="current">4 990</span>
+                            <span class="old">6 290</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- СТРОИТЕЛЬНЫЕ МАТЕРИАЛЫ -->
+                <div class="product-card" data-category="building">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/C7Sg8y7/cement.jpg" alt="Цемент">
+                    </div>
+                    <div class="product-info">
+                        <h3>Цемент М500 Д0</h3>
+                        <p class="description">50 кг, высокопрочный</p>
+                        <div class="price">
+                            <span class="current">450</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="building">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/9hMx7Lz/brick.jpg" alt="Кирпич">
+                    </div>
+                    <div class="product-info">
+                        <h3>Кирпич облицовочный</h3>
+                        <p class="description">Красный, 250x120x65 мм</p>
+                        <div class="price">
+                            <span class="current">25</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="building">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/qCKxzxT/timber.jpg" alt="Брус">
+                    </div>
+                    <div class="product-info">
+                        <h3>Брус строительный</h3>
+                        <p class="description">100x150x6000 мм, сосна</p>
+                        <div class="price">
+                            <span class="current">890</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ОТДЕЛОЧНЫЕ МАТЕРИАЛЫ -->
+                <div class="product-card" data-category="finishing">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/VvzWxjC/paint.jpg" alt="Краска">
+                        <div class="product-labels">
+                            <span class="label-hit">Хит продаж</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Краска Dulux Easy</h3>
+                        <p class="description">Матовая, 10л, белая</p>
+                        <div class="price">
+                            <span class="current">2 990</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="finishing">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/kXZsn3F/wallpaper.jpg" alt="Обои">
+                    </div>
+                    <div class="product-info">
+                        <h3>Обои виниловые</h3>
+                        <p class="description">1.06x10 м, серые</p>
+                        <div class="price">
+                            <span class="current">1 790</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="finishing">
+                    <div class="product-image">
+                        <img src="https://i.ibb.co/TwkX7Px/laminate.jpg" alt="Ламинат">
+                        <div class="product-labels">
+                            <span class="label-sale">-15%</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ламинат Tarkett Holiday</h3>
+                        <p class="description">Дуб классический, 33 класс</p>
+                        <div class="price">
+                            <span class="current">899</span>
+                            <span class="old">1059</span>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальное окно оформления заказа -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckout()">&times;</span>
+            <h2>Оформление заказа</h2>
+            <form id="checkoutForm" class="checkout-form">
+                <div class="form-group">
+                    <label for="delivery-address">Адрес доставки</label>
+                    <input type="text" id="delivery-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-date">Дата доставки</label>
+                    <input type="date" id="delivery-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-time">Время доставки</label>
+                    <select id="delivery-time" required>
+                        <option value="">Выберите время</option>
+                        <option value="morning">9:00 - 12:00</option>
+                        <option value="afternoon">12:00 - 15:00</option>
+                        <option value="evening">15:00 - 18:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий к заказу</label>
+                    <textarea id="comment"></textarea>
+                </div>
+                <button type="submit" class="submit-order">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="catalog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - СтройМаркет</title>
+    <link rel="stylesheet" href="profile-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="catalog.html" class="header-btn home-btn">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+
+        <div class="nav-brand">
+            <a href="index.html">
+                <i class="fas fa-tools"></i>
+                <span>СтройМаркет</span>
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html" class="header-btn cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="header-btn profile-icon active">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Личный кабинет</h1>
+        </div>
+
+        <div class="profile-content">
+            <!-- Информация профиля -->
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-details">
+                    <div class="detail-group">
+                        <label>Имя</label>
+                        <input type="text" id="profileName" readonly>
+                    </div>
+                    <div class="detail-group">
+                        <label>Email</label>
+                        <input type="email" id="profileEmail" readonly>
+                    </div>
+                    <div class="detail-group">
+                        <label>Телефон</label>
+                        <input type="tel" id="profilePhone" readonly>
+                    </div>
+                    <div class="detail-group">
+                        <label>Пароль</label>
+                        <div class="password-input-group">
+                            <input type="password" id="profilePassword" readonly>
+                            <button type="button" class="toggle-password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="edit-profile">Редактировать</button>
+                    <button class="save-profile" style="display: none;">Сохранить</button>
+                </div>
+            </div>
+
+            <!-- История заказов -->
+            <div class="order-history">
+                <h2>История заказов</h2>
+                <div class="orders-list">
+                    <div class="order-item">
+                        <div class="order-header">
+                            <span class="order-number">Заказ #1234</span>
+                            <span class="order-date">01.04.2024</span>
+                            <span class="order-status">Доставлен</span>
+                        </div>
+                        <div class="order-products">
+                            <div class="order-product">
+                                <img src="https://i.ibb.co/9vPNzxh/bosch-hammer.jpg" alt="Перфоратор">
+                                <div class="product-info">
+                                    <h3>Перфоратор BOSCH GBH 2-26 DFR</h3>
+                                    <p>Количество: 1</p>
+                                </div>
+                                <span class="product-price">12 990 ₽</span>
+                            </div>
+                        </div>
+                        <div class="order-footer">
+                            <span class="order-total">Итого: 12 990 ₽</span>
+                            <button class="repeat-order">Повторить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - СтройМаркет</title>
+    <link rel="stylesheet" href="cart-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="catalog.html" class="header-btn home-btn">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+
+        <div class="nav-brand">
+            <a href="index.html">
+                <i class="fas fa-tools"></i>
+                <span>СтройМаркет</span>
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a href="cart.html" class="header-btn cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="header-btn profile-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Основной контент корзины -->
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>Корзина</h1>
+            <button class="clear-cart">Очистить корзину</button>
+        </div>
+
+        <!-- Содержимое корзины -->
+        <div class="cart-content">
+            <div class="cart-items">
+                <!-- Товары в корзине -->
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://i.ibb.co/9vPNzxh/bosch-hammer.jpg" alt="Перфоратор BOSCH">
+                    </div>
+                    <div class="item-details">
+                        <h3>Перфоратор BOSCH GBH 2-26 DFR</h3>
+                        <p class="item-description">Мощность: 800 Вт, SDS-plus</p>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <div class="item-price">
+                        <span class="current">12 990</span>
+                    </div>
+                    <button class="remove-item">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Сайдбар с итогами -->
+            <div class="cart-sidebar">
+                <div class="cart-total">
+                    <h2>Итого</h2>
+                    <div class="total-row">
+                        <span>Товары:</span>
+                        <span class="total-items">12 990</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Скидка:</span>
+                        <span class="total-discount">-1 299</span>
+                    </div>
+                    <div class="total-row final">
+                        <span>К оплате:</span>
+                        <span class="total-sum">11 691</span>
+                    </div>
+                </div>
+                <button class="checkout-btn">Оформить заказ</button>
+                <div class="promo-code">
+                    <input type="text" placeholder="Промокод">
+                    <button>Применить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Поисковая строка -->
+    <!-- <div class="search-overlay">
+        <div class="search-container-header">
+            <input type="text" placeholder="Поиск товаров...">
+            <button class="close-search-header">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div> -->
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
